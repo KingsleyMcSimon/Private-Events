@@ -1,24 +1,74 @@
-# README
+# Name of Project: 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Members Only
 
-Things you may want to cover:
+# Table of contents:
 
-* Ruby version
+1. About The Project
+2. Built With
+3. Getting Started With The Project
+4. Contributing
+5. License
+6. Contact/Contributors
+  i. Link To Project On Github
+7. What Was Learnt During The Project  
+8. Acknowledgements
 
-* System dependencies
+# About The Project:
 
-* Configuration
+In these projects, we built a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and events.
 
-* Database creation
+# Built With:
 
-* Database initialization
+Ruby On Rails.
 
-* How to run the test suite
+# Getting Started With The Project:
 
-* Services (job queues, cache servers, search engines, etc.)
+1.  Model the data for your application, including the necessary tables.
 
-* Deployment instructions
+2. Create a new Rails application and Git repo called private-events. Update your README.
 
-* ...
+3. Build and migrate your User model.
+
+4. Create a simple Users controller and corresponding routes for #new, #create, and #show actions. 
+
+5. Create a simple sign in function that doesn’t require a password – just enter the ID or name of the user you’d like to “sign in” as and click Okay.
+
+6.  You can then save the ID of the “signed in” user in either the session hash or the cookies hash and retrieve it when necessary.
+
+7. Get more on the getting started [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations) 
+
+# Contributing:
+
+In this project, your contributions towards helping in improving this project would be well accomodated. With that, the project will get better rating and give programmers at any level the ability learn, be inspired and create better content.
+
+After you are done with your contributions, you can: 
+
+i.   Fork The project.
+ii.  Create your feature branch using git checkout -b feature/anyfeature(for example)
+iii. Commit your changes following git commit -m 'Name it as it pleases you', when you are done,
+iv.  Push to the branch you have created using git push origin feature/anyfeature and finally
+v.   Open a pull request.
+
+# License:
+
+Distributed under the MIT Licence. See [Licence](https://opensource.org/licenses/MIT) for more informaton
+
+# Contributor(s):
+
+[Kingsley McSimon O.](https://github.com/KingsleyMcSimon) and
+[Roheem Olayemi](https://github.com/Tekcoder)
+
+# Link To The Project On Github:
+
+[Project On Github](https://github.com/KingsleyMcSimon/Private-Events)
+
+# What Was Learnt During The Project:
+
+We implemented a functionality wher user can create events. A user can attend many events. An event can be attended by many users..
+
+# Acknowledgements/References:
+
+[Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
+
+[Michael Hartl - User microposts](https://www.learnenough.com/ruby-on-rails-4th-edition-tutorial/user_microposts)
