@@ -1,6 +1,6 @@
-# Name of Project: 
+# Name of Project:
 
-Members Only
+Private-Events
 
 # Table of contents:
 
@@ -10,8 +10,8 @@ Members Only
 4. Contributing
 5. License
 6. Contact/Contributors
-  i. Link To Project On Github
-7. What Was Learnt During The Project  
+   i. Link To Project On Github
+7. What Was Learnt During The Project
 8. Acknowledgements
 
 # About The Project:
@@ -26,29 +26,29 @@ Ruby On Rails.
 
 1.  Model the data for your application, including the necessary tables.
 
-2. Create a new Rails application and Git repo called private-events. Update your README.
+2.  Create a new Rails application and Git repo called private-events. Update your README.
 
-3. Build and migrate your User model.
+3.  Build and migrate your User model.
 
-4. Create a simple Users controller and corresponding routes for #new, #create, and #show actions. 
+4.  Create a simple Users controller and corresponding routes for #new, #create, and #show actions.
 
-5. Create a simple sign in function that doesn’t require a password – just enter the ID or name of the user you’d like to “sign in” as and click Okay.
+5.  Create a simple sign in function that doesn’t require a password – just enter the ID or name of the user you’d like to “sign in” as and click Okay.
 
 6.  You can then save the ID of the “signed in” user in either the session hash or the cookies hash and retrieve it when necessary.
 
-7. Get more on the getting started [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations) 
+7.  Get more on the getting started [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
 # Contributing:
 
 In this project, your contributions towards helping in improving this project would be well accomodated. With that, the project will get better rating and give programmers at any level the ability learn, be inspired and create better content.
 
-After you are done with your contributions, you can: 
+After you are done with your contributions, you can:
 
-i.   Fork The project.
-ii.  Create your feature branch using git checkout -b feature/anyfeature(for example)
+i. Fork The project.
+ii. Create your feature branch using git checkout -b feature/anyfeature(for example)
 iii. Commit your changes following git commit -m 'Name it as it pleases you', when you are done,
-iv.  Push to the branch you have created using git push origin feature/anyfeature and finally
-v.   Open a pull request.
+iv. Push to the branch you have created using git push origin feature/anyfeature and finally
+v. Open a pull request.
 
 # License:
 
