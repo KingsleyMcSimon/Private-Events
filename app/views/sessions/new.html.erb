@@ -1,0 +1,13 @@
+<% provide(:page, "Log in") %>
+<h1>Log in</h1>
+<hr>
+<div>
+    <%= form_with(scope: :login, local: true, url: login_path, method: :post) do |f| %>
+        <div>
+            <%= f.label :username %>
+            <%= f.text_field :username%>
+        </div>
+
+        <%= f.submit :submit %>
+    <% end %>
+</div>
