@@ -1,5 +1,3 @@
 <%= form_for(@invitation) do |f| %>
-<%= hidden_field_tag :user_event_id, @event.id %>
-<%= hidden_field_tag :attending, true %>
 <%=f.submit 'Join event'%>
 <% end %>
