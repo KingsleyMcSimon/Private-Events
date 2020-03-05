@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if user
     log_in user redirect_to user
     else 
-    flash.now[:danger] = 'No such User' 
+    flash.now[:danger] = 'No such User Exit' 
     render :new
     end
   end

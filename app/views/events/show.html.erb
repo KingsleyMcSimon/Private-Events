@@ -1,2 +1,15 @@
-<% provide(:title, @event.name) %>
-<h1><%= @user.name %>'s event</h1>
+<h1><%=@event.name%></h1>
+<p><%=@event.location%></p>
+<p><%=@event.description%></p>
+<h4>Event attendees</h4>
+<ol>
+<%@attendees.each do |a|%>
+<li><%=a.username%></li>
+<%end%>
+</ol>
+
+<%= form_for(current_user.invitations.create()) do |f| %>
+<%= hidden_field_tag :booked_event_id, @event.id %>
+<%= hidden_field_tag :attending, true %>
+<%=f.submit 'Register for event'%>
+<% end %>

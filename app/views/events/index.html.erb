@@ -1,11 +1,24 @@
-<% provide(:title, @event) %>
-<div class="row">
-<div class="col-md-6">
-    <h1><% if @event is_created? do |e| %></h1>
-<p><%= e.name %></p>
-<p><%= e.description %></p>
-<p><%= e.location %></p>
-<p><%= e.date%></p>
+<div class="row justify-content-center">
+<h1>List of Events</h1>
 </div>
+<br>
+
+<div class="row">
+    <div class="col-6">
+        <h5>Previous Events:</h5>
+        <ul id="upcoming">
+          <%@upcoming.each do |u|%>
+            <li><%= link_to  "#{u.name}", u%></li>
+          <%end%>
+        </ul>
+    </div>
+    <div class="col-6">
+        <h5>Previous events:</h5>
+        <ul id="past">
+          <%@previous.each do |p|%>
+            <li><%= link_to  "#{p.name}", p%></li>
+          <%end%>
+        </ul>
+    </div>
 </div>
 

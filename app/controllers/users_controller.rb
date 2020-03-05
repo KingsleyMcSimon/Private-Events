@@ -1,14 +1,15 @@
 class UsersController < ApplicationController
     def new
-        @user = User.new(user_params)
+        @user = User.new
     end
     
     def create
-      if @user = User.new(user_params)
-         @user.save
+        @user = User.new(user_params)
+        if @user.save
          redirect_to @user
-      else
+        else
          render :new
+        end
     end
     
     def show
