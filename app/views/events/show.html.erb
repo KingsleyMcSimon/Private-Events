@@ -9,7 +9,7 @@
 </ol>
 
 <%= form_for(current_user.invitations.create()) do |f| %>
-<%= hidden_field_tag :booked_event_id, @event.id %>
+<%= hidden_field_tag :user_event_id, @event.id %>
 <%= hidden_field_tag :attending, true %>
 <%=f.submit 'Register for event'%>
 <% end %>

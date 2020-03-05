@@ -1,3 +1,36 @@
-<% provide(:title, @user.name) %>
-<h1><%= @user.name %>'s profile</h1>
-<h3><%= @user.event%></h3>
+<div class="row">
+<h3>Hello <%=current_user.username%></h3>
+</div>
+<br>
+<div class="row">
+    <div class="col-4">
+      <h3>Your created events</h3>
+        <ul>
+            <%@events.each do |e|%>
+              <li><%=e.name%></li>
+            <%end%>
+        </ul>
+    </div>
+    <div class="col-4">
+        <h3>Upcoming Events:</h3>
+        <ul>
+          <%@upcoming.each do |u|%>
+            <li><%=u.name%></li>
+          <%end%>
+        </ul>
+    </div>
+    <div class="col-4">
+        <h3>Previous events:</h3>
+        <ul>
+          <%@previous.each do |p|%>
+            <li><%=p.name%></li>
+          <%end%>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h5>New Event:</h5>
+        <%= render  "events/new" %>
+    </div>
+</div>
