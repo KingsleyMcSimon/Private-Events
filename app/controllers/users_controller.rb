@@ -8,15 +8,19 @@ class UsersController < ApplicationController
         if @user.save
          redirect_to @user
         else
-         render :new
+         render 'new'
         end
     end
     
+    def index
+    end
+    
     def show
-        @user = User.find(user_params)
-        @eventable = @events
-        @events = @eventable.events
-        @event = Event.new
+        @events = current_user.made_events
+        @going = current_user.attended_events
+        @event = current_user.created_events.build
+        @upcoming = @going.upcoming
+        @previous = @going.past
     end
     
     private
