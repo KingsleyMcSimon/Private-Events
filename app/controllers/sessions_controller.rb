@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  include SessionsHelper
   
    def new
    end
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
     redirect_to user
     else 
     flash.now[:danger] = 'No such User Exit' 
-    render :new
+    render 'new'
     end
   end
 
