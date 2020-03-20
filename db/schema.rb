@@ -17,12 +17,17 @@ ActiveRecord::Schema.define(version: 2020_03_11_165038) do
     t.text "description"
     t.datetime "date"
     t.string "location"
+    t.integer "username_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "creator_id"
+    t.index ["username_id"], name: "index_events_on_username_id"
   end
 
   create_table "invitations", force: :cascade do |t|
+    t.integer "user_event_id"
+    t.integer "event_user_id"
+    t.boolean "attending", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,4 +39,6 @@ ActiveRecord::Schema.define(version: 2020_03_11_165038) do
   end
 
   add_foreign_key "events", "users", column: "creator_id"
+  add_foreign_key "invitations", "events", column: "user_event_id"
+  add_foreign_key "invitations", "users", column: "event_user_id"
 end
