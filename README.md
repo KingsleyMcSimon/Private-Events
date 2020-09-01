@@ -16,7 +16,7 @@ Private-Events
 
 # About The Project:
 
-In these projects, we built a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and events.
+In these projects, we built a site similar to a private Eventbrite which allow users to create events and then manage user signups. Users can create events and send invitations to attend events.
 
 # Built With:
 
@@ -40,7 +40,7 @@ Ruby On Rails.
 
 # Contributing:
 
-In this project, your contributions towards helping in improving this project would be well accomodated. With that, the project will get better rating and give programmers at any level the ability learn, be inspired and create better content.
+In this project, your contributions towards helping in improving this project would be well accomodated. With that, the project will get better rating and give programmers at any level the ability to learn, be inspired and create better content.
 
 After you are done with your contributions, you can:
 
@@ -65,10 +65,12 @@ Distributed under the MIT Licence. See [Licence](https://opensource.org/licenses
 
 # What Was Learnt During The Project:
 
-We implemented a functionality wher user can create events. A user can attend many events. An event can be attended by many users..
+We implemented a functionality where a user can create events. A user can attend many events. An event can be attended by many users..
 
 # Acknowledgements/References:
 
 [Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
 [Michael Hartl - User microposts](https://www.learnenough.com/ruby-on-rails-4th-edition-tutorial/user_microposts)
+
+Shout out to all the people whose code and ideas were used to see to the success of this project, we are very grateful.
