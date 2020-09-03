@@ -1,6 +1,26 @@
 
 @import "bootstrap/scss/bootstrap";
 
+.navbar {
+    margin: 0 auto;
+}
+.collapse {
+    background-size: cover;
+}
+.navbar {
+    padding-left: 1%;
+    padding-left: 1%;
+
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+background-color: grey;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

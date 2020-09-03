@@ -73,4 +73,6 @@ We implemented a functionality where a user can create events. A user can attend
 
 [Michael Hartl - User microposts](https://www.learnenough.com/ruby-on-rails-4th-edition-tutorial/user_microposts)
 
+[Bootstrap Nav](https://getbootstrap.com/docs/4.5/components/navbar/)
+
 Shout out to all the people whose code and ideas were used to see to the success of this project, we are very grateful.
