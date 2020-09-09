@@ -1,21 +1,21 @@
 class UsersController < ApplicationController
+   def index
+        @users = User.all
+    end
+    
     def new
         @user = User.new
     end
-    
+
     def create
         @user = User.new(user_params)
         if @user.save
-         redirect_to user_path(@user)
-
+         redirect_to @users
         else
          render 'new'
         end
     end
-    
-    def index
-    end
-    
+
     def show
         @events = current_user.made_events
         @going = current_user.attended_events
@@ -23,9 +23,7 @@ class UsersController < ApplicationController
         @upcoming = @going.upcoming
         @previous = @going.previous
     end
-    
     private
-    
     def user_params
         params.require(:user).permit(:username)
     end
