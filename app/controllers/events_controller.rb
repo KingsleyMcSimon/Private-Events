@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     
     def index
          @upcoming = Event.upcoming
-         @previous = Event.past
+         @previous = Event.previous
     end
     
     def new
@@ -14,7 +14,7 @@ class EventsController < ApplicationController
     end
     
     def create
-        @event = current_user.made_events.build(event_params)
+        @event = current_user.made_events.build(:event_params)
         if @event.save
            redirect_to current_user
            flash[:success] = "The event was successfully created"
@@ -23,7 +23,7 @@ class EventsController < ApplicationController
            @going = current_user.attended_events
            @event = current_user.made_events.build
            @upcoming = @going.upcoming
-           @previous = @going.past
+           @previous = @going.previous
            render 'users/show'
            flash.now[:notice] = "There was an error creating your event"
         end

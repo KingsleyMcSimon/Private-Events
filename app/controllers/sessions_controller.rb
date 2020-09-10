@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(id: params[:session][:id])
     if user
-    log_in user
+    sign_in user
     redirect_to user
     else 
     flash.now[:danger] = 'No such User Exit' 
