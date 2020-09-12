@@ -20,8 +20,9 @@ class UsersController < ApplicationController
         @events = current_user.made_events
         @going = current_user.attended_events
         @event = current_user.made_events.build
-        @upcoming = @going.upcoming
-        @previous = @going.previous
+        debugger
+         @upcoming = current_user.attended_events.upcoming
+        # @previous = @going.previous
     end
     private
     def user_params
