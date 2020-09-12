@@ -23,7 +23,9 @@ class UsersController < ApplicationController
         @upcoming = @going.upcoming
         @previous = @going.previous
     end
+
     private
+
     def user_params
         params.require(:user).permit(:username)
     end
