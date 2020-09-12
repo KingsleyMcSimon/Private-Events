@@ -37,7 +37,7 @@
         <% if @current_user %>
             <span class = "align-middle text-white mr-2 mb-2 mt-1">Hello, <%= @current_user.username %>!</span>
             <li class="nav-item">
-              <%= link_to 'Logout', logout_path(@current_user), method: :delete, class: "btn btn-warning" %>
+              <%= link_to 'Logout', logout_path, method: :delete, class: "btn btn-warning" %>
             </li>
           <% else %>
             <li>
