@@ -8,6 +8,6 @@ class Event < ApplicationRecord
     validates :date, presence: true
     validates :location, presence: true, length: { maximum: 255 }
     
-    scope :upcoming, -> { where('date > ?', Date.today) }
-    scope :previous, -> { where('date < ?', Date.today) }
+    scope :upcoming, -> { where('date > ?', Date.now) }
+    scope :previous, -> { where('date < ?', Date.now) }
 end

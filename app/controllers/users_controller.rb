@@ -23,10 +23,10 @@ class UsersController < ApplicationController
         @events = current_user.made_events
         @going = current_user.attended_events
         @event = current_user.made_events.build
-        debugger
-         @upcoming = current_user.attended_events.upcoming
-        # @previous = @going.previous
+        if current_user.attended_events     
+        @upcoming = current_user.attended_events
     end
+end
 
     private
 
