@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def sign_in(user)
-		cookies.permanent[:id] = user.id
+    cookies.permanent[:id] = user.id
   end
 
   def current_user
