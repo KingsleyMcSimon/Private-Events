@@ -1,36 +1,35 @@
 class UsersController < ApplicationController
   include SessionsHelper
 
-   def index
-        @users = User.all
-    end
+  def index
+    @users = User.all
+  end
 
-    def new
-        @user = User.new
-    end
+  def new
+    @user = User.new
+  end
 
-    def create
-        @user = User.new(user_params)
-        if @user.save
-          sign_in @user
-          redirect_to @user
-        else
-         render 'new'
-        end
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      sign_in @user
+      redirect_to @user
+    else
+      render 'new'
     end
+  end
 
-    def show
-        @events = current_user.made_events
-        @going = current_user.attended_events
-        @event = current_user.made_events.build
-        if current_user.attended_events     
-        @upcoming = current_user.attended_events
-    end
-end
+  def show
+    @events = current_user.made_events
+    @going = current_user.attended_events
+    @event = current_user.made_events.build
+    @upcoming = current_user.attended_events.upcoming
+    @previous = current_user.attended_events.previous
+  end
 
-    private
+  private
 
-    def user_params
-        params.require(:user).permit(:username)
-    end
+  def user_params
+    params.require(:user).permit(:username)
+  end
 end
