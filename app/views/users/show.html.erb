@@ -1,30 +1,30 @@
 <div class="row">
-<h3>Hello <%=current_user.username%></h3>
+<h3>Hello <%= current_user.username %></h3>
 </div>
 <br>
 <div class="row">
   <div class="col-4">
     <h3>Your created events</h3>
     <ul>
-      <%@events.each do |e|%>
-        <li><%=e.name%></li>
-      <%end%>
+      <%= @events.each do |e| %>
+        <li><%= e.name %></li>
+      <% end %>
     </ul>
   </div>
   <div class="col-4">
     <h3>Upcoming Events:</h3>
     <ul>
-      <%@upcoming.each do |u|%>
-        <li><%=u.name%></li>
-      <%end%>
+      <%= @upcoming.each do |u| %>
+        <li><%= u.name %></li>
+      <% end %>
     </ul>
   </div>
   <div class="col-4">
     <h3>Previous events:</h3>
     <ul>
-      <%@previous.each do |p|%>
-        <li><%=p.name%></li>
-      <%end%>
+      <%= @previous.each do |p| %>
+        <li><%= p.name %></li>
+      <% end %>
     </ul>
   </div>
 </div>

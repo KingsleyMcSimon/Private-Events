@@ -19,13 +19,13 @@ class EventsController < ApplicationController
       redirect_to current_user
       flash[:success] = "The event was successfully created"
     else
-      @event = current_user.made_events
-      @going = current_user.attended_events
-      @event = current_user.made_events.build
-      @upcoming = @going.upcoming
-      @previous = @going.previous
-      render 'users/show'
+      # @event = current_user.made_events
+      # @going = current_user.attended_events
+      # @event = current_user.made_events.build
+      # @upcoming = @going.upcoming
+      # @previous = @going.previous
       flash.now[:notice] = "There was an error creating your event"
+      render 'new'
     end
   end
 
