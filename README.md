@@ -56,8 +56,9 @@ Distributed under the MIT Licence. See [Licence](https://opensource.org/licenses
 
 # Contributor(s):
 
-[Kingsley McSimon O.](https://github.com/KingsleyMcSimon) and
-[Roheem Olayemi](https://github.com/Tekcoder)
+[Kingsley McSimon O.](https://github.com/KingsleyMcSimon),
+[Roheem Olayemi](https://github.com/Tekcoder) and
+[Jasem Duncan Valencia](https://github.com/JasemDuncan)
 
 # Link To The Project On Github:
 
