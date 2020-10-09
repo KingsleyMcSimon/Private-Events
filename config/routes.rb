@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'sessions#new'
-  
   # Events
   resources :events
-  # Invitations
-  resources :invitations
-  # Sessions
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
   # Users
   resources :users
-  get '/signup', to: 'users#new'
+  # Invitations
+  resources :invitations
+  root 'events#index'
+  # Sessions
+  resources :sessions, only: [:new, :create, :destroy]  
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'  
+  get 'attend/:id', to: 'events#attend', as: 'attendy'
 end

@@ -1,15 +1,53 @@
-<h1><%=@event.name%></h1>
-<p><%=@event.location%></p>
-<p><%=@event.description%></p>
-<h4>Event attendees</h4>
-<ol>
-<%@attendees.each do |a|%>
-<li><%=a.username%></li>
-<%end%>
-</ol>
+<div class="container">
+  <div class="d-grid justify-content-center">
+    <h2 class="text-center">Events</h2>
+    <p>See the latest events here!</p>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item active"><a class="nav-link active" data-toggle="tab" href="#upcomingEvents">Upcoming Events</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#previousEvents">Previous Events</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="upcomingEvents" class="tab-pane fade in active show">
+          <h2 class="text-center">Upcoming Events</h2>
+          <div class="row mt-4">           
+              <div class="col-sm-12  col-md-12 col-lg-12 d-flex justify-content-center mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Name: </strong><%=@event.name%></h5>
+                            <p><strong>Description: </strong><%= @event.description %></p>
+                            <p><strong>Where: </strong><%= @event.location %></p>
+                            <p><strong>Date: </strong><%= @event.date %></p>
+                            <p><strong>Creator: </strong><%= @event.creator_id %></p>                        
+                            <div class="d-flex justify-content-center">
+                                <%= link_to 'Attend',attendy_path(@event), class: "btn btn-primary" %>
+                            </div>                            
+                            <div>
+                            <h4>Event attendees</h4>
+                            <ol>
+                            <%@event.atendees.each do |a|%>
+                                <li><%=a.username%></li>
+                            <%end%>
+                            </ol>
+                            </div>
+                        </div>                  
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_for(current_user.invitations.create()) do |f| %>
-<%= hidden_field_tag :user_event_id, @event.id %>
-<%= hidden_field_tag :going, true %>
-<%=f.submit 'Register for event'%>
-<% end %>
+
+
+
+
+<%# <%= form_for(current_user.invitations.create()) do |f| %>
+<%# <%= hidden_field_tag :user_event_id, @event.id %>
+<%# <%= hidden_field_tag :going, true %> 
+<%# <%=f.submit 'Register for event'%> 
+<%# <% end %> 

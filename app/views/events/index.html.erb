@@ -20,7 +20,7 @@
                     <h5 class="card-title"><strong>When: </strong><%= event.date.strftime("%m/%d/%Y") %></h5>
                     <p><strong>What: </strong><%= event.description %></p>
                     <p><strong>Where: </strong><%= event.location %></p>
-                    <p><strong>Attendees: </strong><%= event.attendees.count %></p>
+                    
                     <div class="d-flex justify-content-center">
                     <%= link_to 'show', {controller: 'events', action: 'show', id: event}, class: "btn btn-primary" %>
                     </div>
@@ -40,7 +40,7 @@
                     <h5 class="card-title"><strong>When: </strong><%= event.date.strftime("%m/%d/%Y") %></h5>
                     <p><strong>What: </strong><%= event.description %></p>
                     <p><strong>Where: </strong><%= event.location %></p>
-                    <p><strong>Attendees: </strong><%= event.attendees.count %></p>
+                    
                     <div class="d-flex justify-content-center">
                     <%= link_to 'show', {controller: 'events', action: 'show', id: event}, class: "btn btn-primary" %>
                     </div>

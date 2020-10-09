@@ -5,10 +5,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(username: params[:session][:username])
+    user = User.find_by_username(params[:username])
     if user
-      sign_in user
-      redirect_to user
+      session[:user_id] = user.id
+      session[:username] = user.username
+      redirect_to root_url, notice: "Logged in!"
     else
       flash.now[:danger] = 'No such User Exit'
       render 'new'
@@ -16,7 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
-    redirect_to root_url
+    session[:user_id]=nil
+    session[:username]=nil
+    redirect_to root_url, notice: "Logged out"
   end
 end
