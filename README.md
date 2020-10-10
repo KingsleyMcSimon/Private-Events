@@ -1,79 +1,76 @@
-# Name of Project:
+# Private Events (Ruby on Rails Associations) 🚀 
 
-Private-Events
 
-# Table of contents:
+This a site similar to a private  ![screenshot](app/assets/images/eventbrite.png) which allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date and at a location. A user can create events. A user can attend many events. An event can be attended by many users.
 
-1. About The Project
-2. Built With
-3. Getting Started With The Project
-4. Contributing
-5. License
-6. Contact/Contributors
-   i. Link To Project On Github
-7. What Was Learnt During The Project
-8. Acknowledgements
+![screenshot](app/assets/images/all.png)
 
-# About The Project:
+## Features
 
-In these projects, we built a site similar to a private Eventbrite which allow users to create events and then manage user signups. Users can create events and send invitations to attend events.
+### Log in & Sign up
+> If you want to create an event, you have to log in or sign up.
 
-# Built With:
+![screenshot](app/assets/images/login.png)
 
-Ruby On Rails.
+### Create Events
+> The event will create with your user( creator of the event).
 
-# Getting Started With The Project:
+![screenshot](app/assets/images/event.png)
 
-1.  Model the data for your application, including the necessary tables.
+### Attend Events
+> Inside the tab "Events" you can look for the Upcomings Events or the Previous Events. Then you can select the Upcoming Event and attend it.
 
-2.  Create a new Rails application and Git repo called private-events. Update your README.
+![screenshot](app/assets/images/attend.png)
 
-3.  Build and migrate your User model.
+## Built With
 
-4.  Create a simple Users controller and corresponding routes for #new, #create, and #show actions.
+- ruby '2.7.1'
+- 'rails', '~> 6.0.3', '>= 6.0.3.2'
+- 'sqlite3', '~> 1.4'
 
-5.  Create a simple sign in function that doesn’t require a password – just enter the ID or name of the user you’d like to “sign in” as and click Okay.
+## Getting Started
 
-6.  You can then save the ID of the “signed in” user in either the session hash or the cookies hash and retrieve it when necessary.
+​To have a version on your local machine:
 
-7.  Get more on the getting started [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
+- Clone this repository
+- Open a terminal on the containing folder of this project
+- Run 'bundle install' to install the dependencies
+- Set the database using the command 'bin/rake db:migrate'
+- Run the server using the command 'rails server'
 
-# Contributing:
+- Access http://localhost:3000/ in your browser
 
-In this project, your contributions towards helping in improving this project would be well accomodated. With that, the project will get better rating and give programmers at any level the ability to learn, be inspired and create better content.
+- Use the links, forms and buttons to explore the features and create objects in our database
 
-After you are done with your contributions, you can:
 
-i. Fork The project.
-ii. Create your feature branch using git checkout -b feature/anyfeature(for example)
-iii. Commit your changes following git commit -m 'Name it as it pleases you', when you are done,
-iv. Push to the branch you have created using git push origin feature/anyfeature and finally
-v. Open a pull request.
+## Authors
 
-# License:
+👤 **Jasem Duncan Valencia Vargas**
 
-Distributed under the MIT Licence. See [Licence](https://opensource.org/licenses/MIT) for more informaton
+- Github: [@JasemDuncan](https://github.com/JasemDuncan)
+- Linkedin: [@Jasem-Duncan-Valencia](https://www.linkedin.com/in/jasem-duncan-valencia/)
 
-# Contributor(s):
+👤 **Emanuel González**
 
-[Kingsley McSimon O.](https://github.com/KingsleyMcSimon),
-[Roheem Olayemi](https://github.com/Tekcoder) and
-[Jasem Duncan Valencia](https://github.com/JasemDuncan)
+- Github: [@KingsleyMcSimon](https://github.com/KingsleyMcSimon)
+- Linkedin: [@KingsleyMcSimon](https://www.linkedin.com/in/kingsley-mcsimon-o-44411517a/)
 
-# Link To The Project On Github:
+## 🤝 Contributing
 
-[Project On Github](https://github.com/KingsleyMcSimon/Private-Events)
+Contributions, issues and feature requests are welcome!
 
-# What Was Learnt During The Project:
+Feel free to check the [issues page](issues/).
 
-We implemented a functionality where a user can create events. A user can attend many events. An event can be attended by many users..
+## Show your support
 
-# Acknowledgements/References:
+Give a ⭐️ if you like this project!
 
-[Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
+## Acknowledgments
 
-[Michael Hartl - User microposts](https://www.learnenough.com/ruby-on-rails-4th-edition-tutorial/user_microposts)
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-[Bootstrap Nav](https://getbootstrap.com/docs/4.5/components/navbar/)
+## 📝 License
 
-Shout out to all the people whose code and ideas were used to see to the success of this project, we are very grateful.
+This project is [MIT](lic.url) licensed.
