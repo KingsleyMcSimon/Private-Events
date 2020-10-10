@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:username] = user.username
       redirect_to root_url, notice: "Logged in!"
     else
-      flash.now[:danger] = 'No such User Exit'
+      flash.now[:danger] = 'Invalid User'
       render 'new'
     end
   end
