@@ -1,6 +1,4 @@
 ---
 linters:
-  # Configured linters
-
-fixers:
-    enable: true
+    stylelint:
+        config: 'stylelintrc.json'
