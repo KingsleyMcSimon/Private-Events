@@ -1,19 +1,19 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[show edit update destroy attend]
-  
+
   before_action :authenticate_user, except: %i[index show]
 
   def index
-    @event=Event.all
-    @upcoming = Event.upcoming #next_events
-    @previous = Event.previous #prov_events
+    @event = Event.all
+    @upcoming = Event.upcoming # next_events
+    @previous = Event.previous # prov_events
   end
-  
+
   def show
     @event = Event.find_by(id: params[:id])
     # @attendees = @event.attendees
   end
-  
+
   def attend
     user = current_user
     if !user.already_attend?(@event)
@@ -25,13 +25,13 @@ class EventsController < ApplicationController
     redirect_to @event
   end
 
-  #GET events/new
+  # GET events/new
   def new
     user = current_user
     @event = user.events.build
     # @event = Event.new
   end
-  
+
   # GET /events/1/edit
   def edit; end
 
@@ -48,10 +48,10 @@ class EventsController < ApplicationController
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
-  end 
+  end
 
-  
   private
+
   def set_event
     @event = Event.find(params[:id])
   end
@@ -59,5 +59,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :description, :date, :location)
   end
-  # >>>>>>> eb0e2fd10bb4cde6ee792100c5703b44ef6e2278
 end
