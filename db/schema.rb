@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2020_10_09_223243) do
   end
 
   create_table "invitations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
     t.boolean "attending", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "event_id"
-    t.integer "user_id"
     t.index ["event_id"], name: "index_invitations_on_event_id"
     t.index ["user_id"], name: "index_invitations_on_user_id"
   end
@@ -41,4 +41,6 @@ ActiveRecord::Schema.define(version: 2020_10_09_223243) do
   end
 
   add_foreign_key "events", "users", column: "creator_id"
+  add_foreign_key "invitations", "events"
+  add_foreign_key "invitations", "users"
 end
