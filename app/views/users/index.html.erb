@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="d-grid justify-content-center">
+    <h2 class="text-center">Users</h2>    
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item active"><a class="nav-link active" data-toggle="tab" >List of all users</a></li>        
+      </ul>
+      <div class="tab-content">
+        <div id="upcomingEvents" class="tab-pane fade in active show">
+          <div class="row mt-4">
+            <% @users.each do |user| %>
+              <div class="col-sm-12  col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title yellow"><strong>Id: </strong><%= user.id %></h5>
+                    <p><strong>Name: </strong><%= user.username %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

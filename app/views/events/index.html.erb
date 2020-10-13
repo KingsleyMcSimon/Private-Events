@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="d-grid justify-content-center">
+    <h2 class="text-center">Events</h2>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item active"><a class="nav-link active" data-toggle="tab" href="#upcomingEvents">Upcoming Events</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#previousEvents">Previous Events</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="upcomingEvents" class="tab-pane fade in active show">
+          <h2 class="text-center">Upcoming Events</h2>
+          <div class="row mt-4">
+            <% @upcoming.each do |event| %>
+              <div class="col-sm-12  col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Name: </strong><%= event.name %></h5>
+                    <p><strong>Whent: </strong><%= event.date.strftime("%m/%d/%Y") %></p>
+                    <p><strong>What: </strong><%= event.description %></p>
+                    <p><strong>Where: </strong><%= event.location %></p>
+                    
+                    <div class="d-flex justify-content-center">
+                    <%= link_to 'show', {controller: 'events', action: 'show', id: event}, class: "btn btn-primary" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div id="previousEvents" class="tab-pane fade">
+          <h2 class="text-center">Previous Events</h2>
+          <div class="row mt-4">
+          <% @previous.each do |event| %>
+           <div class="col-sm-12  col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Name: </strong><%= event.name %></h5>
+                    <p><strong>When: </strong><%= event.date.strftime("%m/%d/%Y") %></p>
+                    <p><strong>What: </strong><%= event.description %></p>
+                    <p><strong>Where: </strong><%= event.location %></p>
+                    
+                    <div class="d-flex justify-content-center">
+                    <%= link_to 'show', {controller: 'events', action: 'show', id: event}, class: "btn btn-primary" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

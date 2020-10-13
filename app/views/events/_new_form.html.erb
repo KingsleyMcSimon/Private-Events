@@ -1,0 +1,16 @@
+  <%= form_with(model: event, local: true) do |f| %>                  
+    <%= render 'shared/error_messages', object: @event %>
+    <div class="card" style="width: 18rem;">                
+        <div class="card-body">                    
+            <p><strong>Name: </strong> </p>             
+            <p> <%= f.text_field :name %></p>                      
+            <p><strong>Location: </strong> </p>
+            <p> <%=f.text_field :location%> </p>
+            <p><strong>Date: </strong> </p>                      
+            <p> <%=f.date_field :date%></p>
+            <p><strong>Description: </strong> </p>
+            <p><%=f.text_area :description%> </p>
+            <p><%= f.submit "Create Event", class: "btn btn-primary" %> </p>                      
+        </div>
+    </div>                    
+  <% end %>            

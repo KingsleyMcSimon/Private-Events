@@ -1,0 +1,12 @@
+
+<% flash.each do |name, message| %>
+  <div class="alert alert-<%= name %> mb-0"><%= message %></div>
+<% end %>
+
+<nav>
+<% if logged_in?%>
+<%= link_to  "Home", user_path(current_user)%>
+<%= link_to  "Events", events_path%>
+<%= link_to  "logout", logout_path%>
+<% end%>
+</nav>

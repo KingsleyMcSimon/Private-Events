@@ -1,0 +1,16 @@
+<%= alert %>
+<div class="container">  
+    <h1 class="text-center">Log in</h1>  
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">           
+            <%= form_tag sessions_path do |form| %>                    
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">                    
+                        <p><strong>Username: </strong><%= text_field_tag :username %></p>                                           
+                        <%= submit_tag "Login", class: "btn btn-primary" %>                        
+                    </div>
+                </div>                    
+            <% end %>            
+        </div>
+    </div>  
+</div>
