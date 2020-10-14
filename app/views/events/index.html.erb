@@ -1,7 +1,11 @@
 <div class="container">
   <div class="d-grid justify-content-center">
+<<<<<<< HEAD
     <h1 class="text-center">Events</h1>
     <p>See the latest events here!</p>
+=======
+    <h2 class="text-center">Events</h2>
+>>>>>>> 5364c34ddef59cb993097f178e10fea0c93d6151
   </div>
   <div class="row">
     <div class="col-12">
@@ -17,7 +21,8 @@
               <div class="col-sm-12  col-md-6 col-lg-4 d-flex justify-content-center mb-5">
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
-                    <h5 class="card-title"><strong>When: </strong><%= event.date.strftime("%m/%d/%Y") %></h5>
+                    <h5 class="card-title"><strong>Name: </strong><%= event.name %></h5>
+                    <p><strong>Whent: </strong><%= event.date.strftime("%m/%d/%Y") %></p>
                     <p><strong>What: </strong><%= event.description %></p>
                     <p><strong>Where: </strong><%= event.location %></p>
                     
@@ -37,7 +42,8 @@
            <div class="col-sm-12  col-md-6 col-lg-4 d-flex justify-content-center mb-5">
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
-                    <h5 class="card-title"><strong>When: </strong><%= event.date.strftime("%m/%d/%Y") %></h5>
+                    <h5 class="card-title"><strong>Name: </strong><%= event.name %></h5>
+                    <p><strong>When: </strong><%= event.date.strftime("%m/%d/%Y") %></p>
                     <p><strong>What: </strong><%= event.description %></p>
                     <p><strong>Where: </strong><%= event.location %></p>
                     

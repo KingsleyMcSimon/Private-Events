@@ -1,14 +1,16 @@
-<h1>Sign up</h1>
-<h2>Create a Profile</h2>
-
-<%= render 'shared/error_messages', object: @user %>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+<div class="container">  
+    <h1 class="text-center">Sign up</h1>  
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">           
+           <%= form_for(@user) do |f| %>                    
+              <%= render 'shared/error_messages', object: @user %>
+              <div class="card" style="width: 18rem;">                
+                  <div class="card-body">                    
+                      <p><strong>Username: </strong> <%= f.text_field :username %></p>      
+                      <%= f.submit "Create my account", class: "btn btn-primary" %>                
+                  </div>
+              </div>                    
+            <% end %>            
+        </div>
+    </div>  
 </div>

@@ -10,8 +10,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # @going = current_user.attended_events
     # @event = current_user.made_events.build
-    @upcoming = @user.attend.upcoming #next_events
-    @previous = @user.attend.previous #prev_events
+    @upcoming = @user.attend.upcoming # next_events
+    @previous = @user.attend.previous # prev_events
   end
 
   def new
@@ -22,18 +22,17 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: "Success"}
-        format.json { render :show, status: :created, location: @user}
+        format.html { redirect_to @user, notice: 'Success' }
+        format.json { render :show, status: :created, location: @user }
       else
-        format.html { render :new}
+        format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  
-
   private
+
   def set_user
     @user = User.find(params[:id])
   end
